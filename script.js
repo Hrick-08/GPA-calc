@@ -83,7 +83,7 @@ function calculateCGPA() {
 
         const semesterGPA = semesterCredits > 0 ? (semesterWeightedSum / semesterCredits) : 0;
         const semesterGPAElementItem = document.createElement('p');
-        semesterGPAElementItem.textContent = `Semester ${semester.dataset.semester}: GPA ${semesterGPA.toFixed(2)}`;
+        semesterGPAElementItem.textContent = `Semester ${semester.dataset.semester}: GPA ${semesterGPA}`;
         semesterGPAElement.appendChild(semesterGPAElementItem);
 
         totalCredits += semesterCredits;
@@ -91,7 +91,7 @@ function calculateCGPA() {
     });
 
     const totalCGPA = totalCredits > 0 ? (weightedSum / totalCredits) : 0;
-    totalCGPAElement.textContent = `Total CGPA: ${totalCGPA.toFixed(2)}`;
+    totalCGPAElement.textContent = `Total CGPA: ${totalCGPA}`;
     resultsContainer.style.display = 'block';
 }
 
